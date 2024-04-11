@@ -1,0 +1,14 @@
+extends ../layout/admin
+
+block blockcontent
+    div.py-5
+        h2.text-center.text-2xl.font-extrabold=pagina
+
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                div
+                    label.block.text-sm.text-gray-500.mb-2.font-bold.cursor-pointer= usuari.nom 
+                div
+                    label.block.text-sm.text-gray-500.mb-2.font-bold.cursor-pointer= usuari.email
+
+        //- pre= JSON.stringify(propietats, undefined, 2)

@@ -1,0 +1,11 @@
+extends ../layout/index
+
+block blockcontent
+    div.py-5
+        h1.text-4xl.my-5.font-extrabold.text-center Finques
+            span.font-normal Qmr
+        h2.text-center.text-2xl.font-extrabold= pagina
+        
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                p(class= error ? 'bg-red-500' : 'bg-green-500').py-2.px-5.rounded-lg.w-full.font-bold.text-center.text-white.uppercase= missatge         

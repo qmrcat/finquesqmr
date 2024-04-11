@@ -1,0 +1,824 @@
+{
+    "items": [
+        {
+            "id": "7a9ac31",
+            "original": "Aquest usuari no ha confirmat el compte, està pendent de verificar, es una prova",
+            "trans": "Aquest usuari no ha confirmat el compte, està pendent de verificar, es una prova"
+        },
+        {
+            "id": "aab9208e",
+            "original": "La segona clau de pas és obligatoria es una prova",
+            "trans": "La segona clau de pas és obligatoria es una prova"
+        },
+        {
+            "id": "9250a4c1",
+            "original": "Inici de sessió",
+            "trans": "Inici de sessió"
+        },
+        {
+            "id": "4f9f901",
+            "original": "Correu electrònic",
+            "trans": "Correu electrònic"
+        },
+        {
+            "id": "86ab4ab8",
+            "original": "Paraula de pas",
+            "trans": "Paraula de pas"
+        },
+        {
+            "id": "9ee88e15",
+            "original": "Inicia sessió",
+            "trans": "Inicia sessió"
+        },
+        {
+            "id": "43c4fb42",
+            "original": "No tens compte? Crea'n un",
+            "trans": "No tens compte? Crea'n un"
+        },
+        {
+            "id": "2e627ac5",
+            "original": "Has oblidat el Password?",
+            "trans": "Has oblidat el Password?"
+        },
+        {
+            "id": "4058f453",
+            "original": "Recuperar clau de pas",
+            "trans": ""
+        },
+        {
+            "id": "59c4824a",
+            "original": "Registrar-se",
+            "trans": "Registrar-se"
+        },
+        {
+            "id": "f656f908",
+            "original": "Crea el teu compte",
+            "trans": "Crea el teu compte"
+        },
+        {
+            "id": "54231355",
+            "original": "Nom",
+            "trans": "Nom"
+        },
+        {
+            "id": "8b3ab676",
+            "original": "correu@electrònic.com",
+            "trans": "correu@electrònic.com"
+        },
+        {
+            "id": "35c246d5",
+            "original": "password",
+            "trans": "password"
+        },
+        {
+            "id": "30541f89",
+            "original": "Repetiu la paraula de pas",
+            "trans": "Repetiu la paraula de pas"
+        },
+        {
+            "id": "100fa0c3",
+            "original": "repetir password",
+            "trans": "repetir password"
+        },
+        {
+            "id": "b94c4e3c",
+            "original": "Crear compte",
+            "trans": "Crear compte"
+        },
+        {
+            "id": "e270419a",
+            "original": "Ja tens un compte? Inicia Sessió",
+            "trans": "Ja tens un compte? Inicia Sessió"
+        },
+        {
+            "id": "3dae0d65",
+            "original": "Correu electrònic de recuperació",
+            "trans": "Correu electrònic de recuperació"
+        },
+        {
+            "id": "2c827f00",
+            "original": "Escriu aquest codi:",
+            "trans": "Escriu aquest codi:"
+        },
+        {
+            "id": "48369107",
+            "original": "CODI",
+            "trans": "CODI"
+        },
+        {
+            "id": "444ef90e",
+            "original": "Recuperar clau",
+            "trans": "Recuperar clau"
+        },
+        {
+            "id": "207206b7",
+            "original": "La teva IP:",
+            "trans": "La teva IP:"
+        },
+        {
+            "id": "7ea37cb3",
+            "original": "codi",
+            "trans": "codi"
+        },
+        {
+            "id": "a244d463",
+            "original": "El teu Nom",
+            "trans": "El teu Nom"
+        },
+        {
+            "id": "1a5c2cb2",
+            "original": "El nom és obligatori",
+            "trans": "El nom és obligatori"
+        },
+        {
+            "id": "20fc24a8",
+            "original": "El correu electrònic és obligatori",
+            "trans": "El correu electrònic és obligatori"
+        },
+        {
+            "id": "88743a03",
+            "original": "Ha de ser un correu electrònic correcte",
+            "trans": "Ha de ser un correu electrònic correcte"
+        },
+        {
+            "id": "d689d44a",
+            "original": "La clau de pas és obligatoria",
+            "trans": "La clau de pas és obligatoria"
+        },
+        {
+            "id": "cb6b5c6f",
+            "original": "La segona clau de pas és obligatoria",
+            "trans": "La segona clau de pas és obligatoria"
+        },
+        {
+            "id": "d3ae4531",
+            "original": "Les claus de pas no són iguals",
+            "trans": "Les claus de pas no són iguals"
+        },
+        {
+            "id": "7c97c9c2",
+            "original": "El codi es obligatori",
+            "trans": "El codi es obligatori"
+        },
+        {
+            "id": "25ecba7c",
+            "original": "Recuperar clau pas",
+            "trans": "Recuperar clau pas"
+        },
+        {
+            "id": "4156b733",
+            "original": "El codi introduit no es correcte",
+            "trans": "El codi introduit no es correcte"
+        },
+        {
+            "id": "181b0cf5",
+            "original": "Et queden pocs intents, per recuperar el correu",
+            "trans": "Et queden pocs intents, per recuperar el correu"
+        },
+        {
+            "id": "17bfd120",
+            "original": "S'ha superat el màxim d'intents per recuperar la clau de pas, intenteu-ho d'aquí a 20 minuts",
+            "trans": "S'ha superat el màxim d'intents per recuperar la clau de pas, intenteu-ho d'aquí a 20 minuts"
+        },
+        {
+            "id": "6d473c92",
+            "original": "Hem enviat un correu a l'adreça que heu indicat, si noteu que tardeu a rebre'l, reviseu la carpeta de correu brossa.",
+            "trans": "Hem enviat un correu a l'adreça que heu indicat, si noteu que tardeu a rebre'l, reviseu la carpeta de correu brossa."
+        },
+        {
+            "id": "e8a9a5f1",
+            "original": "Alta propietat",
+            "trans": "Alta propietat"
+        },
+        {
+            "id": "b06cfb5e",
+            "original": "Iniciar Sessió",
+            "trans": "Iniciar Sessió"
+        },
+        {
+            "id": "efcce356",
+            "original": "Nova propietat",
+            "trans": "Nova propietat"
+        },
+        {
+            "id": "61fd122d",
+            "original": "Informació General",
+            "trans": "Informació General"
+        },
+        {
+            "id": "4a6619e5",
+            "original": "Afegeix Informació sobre la propietat en venda",
+            "trans": "Afegeix Informació sobre la propietat en venda"
+        },
+        {
+            "id": "da0caa91",
+            "original": "Titol anunci",
+            "trans": "Titol anunci"
+        },
+        {
+            "id": "2cedfe15",
+            "original": "Títol Propietat, ex. Casa a la Platja",
+            "trans": "Títol Propietat, ex. Casa a la Platja"
+        },
+        {
+            "id": "dc66fd5b",
+            "original": "Descripció",
+            "trans": "Descripció"
+        },
+        {
+            "id": "10dcde6c",
+            "original": "Descripció de la Propietat",
+            "trans": "Descripció de la Propietat"
+        },
+        {
+            "id": "cce1908e",
+            "original": "Categoria",
+            "trans": "Categoria"
+        },
+        {
+            "id": "73500e30",
+            "original": "- Seleccioneu -",
+            "trans": "- Seleccioneu -"
+        },
+        {
+            "id": "85d976d1",
+            "original": "Preu",
+            "trans": "Preu"
+        },
+        {
+            "id": "b6d243db",
+            "original": "Habitacions",
+            "trans": "Habitacions"
+        },
+        {
+            "id": "e682a632",
+            "original": "Estacionament",
+            "trans": "Estacionament"
+        },
+        {
+            "id": "5bf6c946",
+            "original": "WC",
+            "trans": "WC"
+        },
+        {
+            "id": "a4345397",
+            "original": "Ubicació",
+            "trans": "Ubicació"
+        },
+        {
+            "id": "6975b68c",
+            "original": "Ubica la propietat al mapa",
+            "trans": "Ubica la propietat al mapa"
+        },
+        {
+            "id": "e543aabc",
+            "original": "Afegir Imatge",
+            "trans": "Afegir Imatge"
+        },
+        {
+            "id": "8eba9ad1",
+            "original": "El titol de l'anunci es obligatori",
+            "trans": "El titol de l'anunci es obligatori"
+        },
+        {
+            "id": "d2cba261",
+            "original": "La descripció no pot anar buida",
+            "trans": "La descripció no pot anar buida"
+        },
+        {
+            "id": "aa4de796",
+            "original": "Selecciona una categoria",
+            "trans": "Selecciona una categoria"
+        },
+        {
+            "id": "1c0f9f96",
+            "original": "Selecciona un rang de preus",
+            "trans": "Selecciona un rang de preus"
+        },
+        {
+            "id": "a7c4dae2",
+            "original": "Selecciona la quantitat d'habitacions",
+            "trans": "Selecciona la quantitat d'habitacions"
+        },
+        {
+            "id": "acd24621",
+            "original": "Selecciona la quantitat d'estacionaments",
+            "trans": "Selecciona la quantitat d'estacionaments"
+        },
+        {
+            "id": "f379e900",
+            "original": "Selecciona la quantitat de banys",
+            "trans": "Selecciona la quantitat de banys"
+        },
+        {
+            "id": "df57f223",
+            "original": "Casa",
+            "trans": "Casa"
+        },
+        {
+            "id": "1a406229",
+            "original": "Apartament",
+            "trans": "Apartament"
+        },
+        {
+            "id": "eece07ca",
+            "original": "Pis",
+            "trans": "Pis"
+        },
+        {
+            "id": "dd6a7651",
+            "original": "Magatzem",
+            "trans": "Magatzem"
+        },
+        {
+            "id": "cc50d1f1",
+            "original": "Terreny",
+            "trans": "Terreny"
+        },
+        {
+            "id": "85ad0ee4",
+            "original": "Cabana",
+            "trans": "Cabana"
+        },
+        {
+            "id": "be982ddc",
+            "original": "Compte Creat Correctament",
+            "trans": "Compte Creat Correctament"
+        },
+        {
+            "id": "e09f1345",
+            "original": "Compte Confirmat",
+            "trans": "Compte Confirmat"
+        },
+        {
+            "id": "4a2959f1",
+            "original": "El compte s'ha confirmar correctament, Benvingut/da",
+            "trans": "El compte s'ha confirmar correctament, Benvingut/da"
+        },
+        {
+            "id": "7db35812",
+            "original": "Ja pots iniciar sessió",
+            "trans": "Ja pots iniciar sessió"
+        },
+        {
+            "id": "d90c5556",
+            "original": "Et queden pocs intents, iniciar sessió",
+            "trans": "Et queden pocs intents, iniciar sessió"
+        },
+        {
+            "id": "c97e60dd",
+            "original": "Llistat propietats",
+            "trans": "Llistat propietats"
+        },
+        {
+            "id": "8306834d",
+            "original": "Les teves propietats",
+            "trans": "Les teves propietats"
+        },
+        {
+            "id": "c07a5cf6",
+            "original": "Crear una propietat nova",
+            "trans": "Crear una propietat nova"
+        },
+        {
+            "id": "5d23cc6d",
+            "original": "El teu compte no ha estat confirmat",
+            "trans": "El teu compte no ha estat confirmat"
+        },
+        {
+            "id": "8412522b",
+            "original": "Et queden pocs intents, per a iniciar sessió",
+            "trans": "Et queden pocs intents, per a iniciar sessió"
+        },
+        {
+            "id": "24031991",
+            "original": "Existeixen errors en les dades introduïdes",
+            "trans": "Existeixen errors en les dades introduïdes"
+        },
+        {
+            "id": "b92c39e7",
+            "original": "Reestableix el teu Password",
+            "trans": "Reestableix el teu Password"
+        },
+        {
+            "id": "cc6ec29d",
+            "original": "Nova clau de pas",
+            "trans": "Nova clau de pas"
+        },
+        {
+            "id": "ff4746d2",
+            "original": "El teu password",
+            "trans": "El teu password"
+        },
+        {
+            "id": "dd299c29",
+            "original": "Desar nou Password",
+            "trans": "Desar nou Password"
+        },
+        {
+            "id": "d6161a30",
+            "original": "La Paraula de pas s'ha desat correctament",
+            "trans": "La Paraula de pas s'ha desat correctament"
+        },
+        {
+            "id": "84ea2280",
+            "original": "Lllistat propietats",
+            "trans": "Lllistat propietats"
+        },
+        {
+            "id": "3a55f0c3",
+            "original": "El meu perfil",
+            "trans": "El meu perfil"
+        },
+        {
+            "id": "9bdd050a",
+            "original": "Tancar la Sesió",
+            "trans": "Tancar la Sesió"
+        },
+        {
+            "id": "5155b789",
+            "original": "Inicia Sessió",
+            "trans": "Inicia Sessió"
+        },
+        {
+            "id": "c43b3fdd",
+            "original": "Cerca Propietats",
+            "trans": "Cerca Propietats"
+        },
+        {
+            "id": "f6990721",
+            "original": "Cerca",
+            "trans": "Cerca"
+        },
+        {
+            "id": "1e070688",
+            "original": "Cerca la teva casa de somni",
+            "trans": "Cerca la teva casa de somni"
+        },
+        {
+            "id": "db446d04",
+            "original": "Cercar propietats",
+            "trans": "Cercar propietats"
+        },
+        {
+            "id": "d63c8a32",
+            "original": "Afegir Imatge:",
+            "trans": "Afegir Imatge:"
+        },
+        {
+            "id": "1a95e355",
+            "original": "Publicar Propiedad",
+            "trans": "Publicar Propiedad"
+        },
+        {
+            "id": "1b045041",
+            "original": "Publicar Propietat",
+            "trans": "Publicar Propietat"
+        },
+        {
+            "id": "76b46d12",
+            "original": "Puja la teva imatge aquí",
+            "trans": "Puja la teva imatge aquí"
+        },
+        {
+            "id": "e7f7357e",
+            "original": "Esborrar Fitxer",
+            "trans": "Esborrar Fitxer"
+        },
+        {
+            "id": "7ef81ba3",
+            "original": "El límit és sols 1 Fitxer",
+            "trans": "El límit és sols 1 Fitxer"
+        },
+        {
+            "id": "f333b16c",
+            "original": "No Publicado",
+            "trans": "No Publicado"
+        },
+        {
+            "id": "55ded902",
+            "original": "Editar",
+            "trans": "Editar"
+        },
+        {
+            "id": "c09acc4a",
+            "original": "Eliminar",
+            "trans": "Eliminar"
+        },
+        {
+            "id": "40a36288",
+            "original": "Anterior",
+            "trans": "Anterior"
+        },
+        {
+            "id": "4291b389",
+            "original": "Seguent",
+            "trans": "Seguent"
+        },
+        {
+            "id": "1371d001",
+            "original": "Mostrando",
+            "trans": "Mostrando"
+        },
+        {
+            "id": "55ed9702",
+            "original": "resultats",
+            "trans": "resultats"
+        },
+        {
+            "id": "9aa4711b",
+            "original": "Mostran",
+            "trans": "Mostran"
+        },
+        {
+            "id": "b09bc50d",
+            "original": "Publicat",
+            "trans": "Publicat"
+        },
+        {
+            "id": "9cdf4063",
+            "original": "Pendent de publicar",
+            "trans": "Pendent de publicar"
+        },
+        {
+            "id": "767cec02",
+            "original": "Modificar propietat",
+            "trans": "Modificar propietat"
+        },
+        {
+            "id": "44002f5e",
+            "original": "Dades de la propietat",
+            "trans": "Dades de la propietat"
+        },
+        {
+            "id": "4379389d",
+            "original": "Modifica la informació sobre la propietat en venda",
+            "trans": "Modifica la informació sobre la propietat en venda"
+        },
+        {
+            "id": "d0b45a61",
+            "original": "Desar els canvis",
+            "trans": "Desar els canvis"
+        },
+        {
+            "id": "8ab7562d",
+            "original": "No hi ha cap propietat",
+            "trans": "No hi ha cap propietat"
+        },
+        {
+            "id": "69a763ae",
+            "original": "No existeix cap usuari amb aquestes dades",
+            "trans": "No existeix cap usuari amb aquestes dades"
+        },
+        {
+            "id": "1ec27988",
+            "original": "Categoria:",
+            "trans": "Categoria:"
+        },
+        {
+            "id": "ca84793d",
+            "original": "imatge de la propietat",
+            "trans": "imatge de la propietat"
+        },
+        {
+            "id": "fae179df",
+            "original": "Informació propietat",
+            "trans": "Informació propietat"
+        },
+        {
+            "id": "d33f1c2d",
+            "original": "Estacionaments",
+            "trans": "Estacionaments"
+        },
+        {
+            "id": "8ba561ba",
+            "original": "Direcció",
+            "trans": "Direcció"
+        },
+        {
+            "id": "bc1a5783",
+            "original": "Venedor",
+            "trans": "Venedor"
+        },
+        {
+            "id": "750722dc",
+            "original": "Si vols contactar amb el venedor",
+            "trans": "Si vols contactar amb el venedor"
+        },
+        {
+            "id": "4a1675ea",
+            "original": "has de crear un compte",
+            "trans": "has de crear un compte"
+        },
+        {
+            "id": "adffb44d",
+            "original": "Ja exiteix un usuari amb aquest correu",
+            "trans": "Ja exiteix un usuari amb aquest correu"
+        },
+        {
+            "id": "e8b7be43",
+            "original": "a",
+            "trans": "a"
+        },
+        {
+            "id": "7d90298b",
+            "original": "de",
+            "trans": "de"
+        },
+        {
+            "id": "789e0ca4",
+            "original": "Filtrar Propietats:",
+            "trans": "Filtrar Propietats:"
+        },
+        {
+            "id": "75ae45b8",
+            "original": "Categories",
+            "trans": "Categories"
+        },
+        {
+            "id": "ea5ff43f",
+            "original": "Preus",
+            "trans": "Preus"
+        },
+        {
+            "id": "533f3306",
+            "original": "Filtrar per:",
+            "trans": "Filtrar per:"
+        },
+        {
+            "id": "7f82c9c",
+            "original": "Filtrar propietats per:",
+            "trans": "Filtrar propietats per:"
+        },
+        {
+            "id": "ea8a06ab",
+            "original": "Totes",
+            "trans": "Totes"
+        },
+        {
+            "id": "a4ff5780",
+            "original": "Tots",
+            "trans": "Tots"
+        },
+        {
+            "id": "d9bae606",
+            "original": "Últimes propietats incorporades",
+            "trans": "Últimes propietats incorporades"
+        },
+        {
+            "id": "5b9ef20",
+            "original": "Habitacions:",
+            "trans": "Habitacions:"
+        },
+        {
+            "id": "8bea2453",
+            "original": "WC:",
+            "trans": "WC:"
+        },
+        {
+            "id": "e55f0d0b",
+            "original": "Preu:",
+            "trans": "Preu:"
+        },
+        {
+            "id": "ebcaa423",
+            "original": "Visualtzar Propietat",
+            "trans": "Visualtzar Propietat"
+        },
+        {
+            "id": "ddda2c8f",
+            "original": "Cases",
+            "trans": "Cases"
+        },
+        {
+            "id": "59a61705",
+            "original": "Apartaments",
+            "trans": "Apartaments"
+        },
+        {
+            "id": "c5c101b8",
+            "original": "Pisos",
+            "trans": "Pisos"
+        },
+        {
+            "id": "7bfc41f",
+            "original": "Magatzems",
+            "trans": "Magatzems"
+        },
+        {
+            "id": "d1785d50",
+            "original": "Terrenys",
+            "trans": "Terrenys"
+        },
+        {
+            "id": "d8808160",
+            "original": "Cabanes",
+            "trans": "Cabanes"
+        },
+        {
+            "id": "e3ca6725",
+            "original": "en Venda",
+            "trans": "en Venda"
+        },
+        {
+            "id": "3df9f052",
+            "original": "Error pagina no trobada",
+            "trans": "Error pagina no trobada"
+        },
+        {
+            "id": "28dcfd02",
+            "original": "Error, pagina no trobada",
+            "trans": "Error, pagina no trobada"
+        },
+        {
+            "id": "da426f7d",
+            "original": "Resultats de la Cerca",
+            "trans": "Resultats de la Cerca"
+        },
+        {
+            "id": "fa5ab770",
+            "original": "Editar propietat",
+            "trans": "Editar propietat"
+        },
+        {
+            "id": "3d56dc4e",
+            "original": "Missatge",
+            "trans": "Missatge"
+        },
+        {
+            "id": "dd875504",
+            "original": "Escriu el teu missatge aquí",
+            "trans": "Escriu el teu missatge aquí"
+        },
+        {
+            "id": "7f6074a1",
+            "original": "Enviar Missatge",
+            "trans": "Enviar Missatge"
+        },
+        {
+            "id": "f5ff938b",
+            "original": "Error base de dades",
+            "trans": "Error base de dades"
+        },
+        {
+            "id": "ccc265d4",
+            "original": "S'ha produit un error: ",
+            "trans": "S'ha produit un error: "
+        },
+        {
+            "id": "91c97371",
+            "original": "Perfil",
+            "trans": "Perfil"
+        },
+        {
+            "id": "c4d2ea10",
+            "original": "Tornar a les teves propietats",
+            "trans": "Tornar a les teves propietats"
+        },
+        {
+            "id": "f5bb057",
+            "original": "Nom:",
+            "trans": "Nom:"
+        },
+        {
+            "id": "442d1450",
+            "original": "Email:",
+            "trans": "Email:"
+        },
+        {
+            "id": "85570c74",
+            "original": "Missatge:",
+            "trans": "Missatge:"
+        },
+        {
+            "id": "5539ae99",
+            "original": "Enviat el:",
+            "trans": "Enviat el:"
+        },
+        {
+            "id": "fb91bf75",
+            "original": "Tens missatges",
+            "trans": "Tens missatges"
+        },
+        {
+            "id": "fa1c6282",
+            "original": "Veure propietat",
+            "trans": "Veure propietat"
+        },
+        {
+            "id": "e16f7ba5",
+            "original": "No s'ha pogut canviar l'estat",
+            "trans": "No s'ha pogut canviar l'estat"
+        },
+        {
+            "id": "45f611e4",
+            "original": "No existeix la propietat",
+            "trans": "No existeix la propietat"
+        },
+        {
+            "id": "bdc5f5ca",
+            "original": "S'ha modificat l'estat correctament",
+            "trans": "S'ha modificat l'estat correctament"
+        }
+    ]
+}

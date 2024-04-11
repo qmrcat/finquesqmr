@@ -1,0 +1,31 @@
+header.bg-indigo-600.p-4
+    .container.mx-auto.flex.justify-between.items-center
+        a(href="/home")
+            h1.text-2xl.text-white.font-extrabold.text-center (home) Finques
+                span.font-normal Qmr
+        if usuariAutentificat 
+            nav(class="my-5 text-sm md:flex md:items-center md:gap-4 font-bold text-white hidden ")
+                a(href="/propietats/llistat-propietats") #{__('Lllistat propietats')}
+                a(href="/propietats/perfil") #{__('El meu perfil')}
+
+                form(action="/auth/tancar-sessio" method="POST")
+                    input(type="hidden" name="_csrf" value=csrfToken )
+                    input( type="submit" class="bg-indigo-800  hover:bg-indigo-400 py-2 px-10 rounded-lg font-bold cursor-pointer" value=`${__("Tancar la Sesió")}`)
+        else
+            nav(class="my-5 text-sm md:flex md:items-center md:gap-4 font-bold text-white hidden ")
+                a(href="/auth/registre") #{__('Crear compte')}
+                a(href="/auth/login") #{__('Inicia Sessió')}
+                
+
+div(class="bg-indigo-700 py-5 hidden lg:block")
+    div(class="container mx-auto flex justify-between")
+        nav(class="flex gap-4 items-center")
+            each categoria in categories    
+                a(href=`/categories/${categoria.id} ` class="text-sm font-bold uppercase text-white hover:scale-110 hover:underline") #{__(categoria.nomplu)}
+                
+
+
+        form(action="/cercar" method="POST" class="flex gap-3 items-center")
+            input(type="hidden" name="_csrf" value= csrfToken)
+            input(type="text" id="consulta" name="consulta" placeholder=`${__("Cerca Propietats")}` class="p-2 rounded-lg shadow text-sm")
+            input(type="submit" class="bg-indigo-800 hover:bg-indigo-400 rounded-lg text-white uppercase font-bold p-2 cursor-pointer text-sm" value=`${__("Cerca")}`)

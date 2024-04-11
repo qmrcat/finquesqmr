@@ -1,0 +1,13 @@
+extends ./layout/home
+
+
+block blockcontent
+    div.py-5
+        h2.text-center.text-2xl.font-extrabold=pagina
+
+        if propietats.length
+            div(class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-14")
+                each propietat in propietats
+                    include ./layout/templates/card
+        else 
+            p(class="text-center text-gray-800 text-2xl py-10") #{__('No hi ha cap propietat')}

@@ -1,0 +1,40 @@
+extends ../layout/index
+
+block blockcontent
+    div.py-5
+        h2.text-center.text-2xl.font-extrabold=pagina
+
+        if errors
+            div#errors( class="max-w-md mx-auto mt-5 mb-3")
+                each error in errors
+                    p.bg-red-600.text-white.uppercase.text-xs.text-center.p-2.mb-1.font-bold= error.msg
+        
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form.space-y-3(method="POST" action="/auth/recuperar" noValidate)
+                    input(type="hidden" name="_csrf" value= csrfToken)
+                    
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold.cursor-pointer(for="email") #{__('Correu electrònic de recuperació')}
+                        input#email.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700(
+                                placeholder=`${__("correu@electrònic.com")}` type="email" name="email")
+                    div.flex.items-center.justify-start.mt-3.gap-3
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold.cursor-pointer(for="codi") #{__('Escriu aquest codi:')}
+                        img(src= pngB64Codi alt=`${__("codi")}`)
+                        
+                    div
+                        input#codi.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700(
+                                placeholder=`${__("CODI")}` type="text" name="codi" autocomplete="off") 
+
+                    input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold mt-2 py-3 cursor-pointer" 
+                            type="submit" value=`${__("Recuperar clau")}`)
+                    input(type="hidden" name="_email" value= emailvell )        
+                    input(type="hidden" name="_tkintents" value= tkintents )   
+                    input(type="hidden" name="_ccontrol" value= ccontrol )   
+
+                div.flex.items-center.justify-between.mt-3
+                    a.text-gray-500.text-xs.font-extrabold(href="/auth/registre") #{__('No tens compte? Crea\'n un')}
+                    a.text-gray-500.text-xs.font-extrabold(href="/auth/login") #{__('Ja tens un compte? Inicia Sessió')}
+                div.flex.items-center.justify-between.mt-3
+                    h4.text-gray-500.text-sm.uppercase #{__('La teva IP:')} 
+                        span.font-extrabold #{clientIp}

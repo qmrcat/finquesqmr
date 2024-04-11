@@ -1,0 +1,39 @@
+extends ../layout/index
+
+block blockcontent
+    div.py-5
+        h2.text-center.text-2xl.font-extrabold=pagina
+        p.text-center #{__('Crea el teu compte')} 
+
+        if errors
+            div#errors( class="max-w-md mx-auto mt-5 mb-3")
+                each error in errors
+                    p.bg-red-600.text-white.uppercase.text-xs.text-center.p-2.mb-1.font-bold= error.msg
+
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form.space-y-3(method="POST" action="/auth/registre" noValidate)
+                    input(type="hidden" name="_csrf" value= csrfToken)
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold.cursor-pointer(for="nom") #{__('Nom')} 
+                        input#nom.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700(
+                                placeholder=`${__("El teu Nom")}` type="text" name="nom"  value= usuari ? usuari.nom : '' )
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold.cursor-pointer(for="email") #{__('Correu electrònic')} 
+                        input#email.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700(
+                                placeholder=`${__("correu@electrònic.com")}` type="email" name="email"  value= usuari ? usuari.email : '' ) 
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold.cursor-pointer(for="password") #{__('Paraula de pas')} 
+                        input#password.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700(
+                                placeholder=`${__("password")}` type="password" name="password" )
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold.cursor-pointer(for="repetir_password") #{__('Repetiu la paraula de pas')} 
+                        input#repetir_password.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700(
+                                placeholder=`${__("repetir password")}` type="password" name="repetir_password"  )
+
+                    input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold mt-2 py-3 cursor-pointer" 
+                            type="submit" value=`${__("Crear compte")}`)
+
+                div.flex.items-center.justify-between.mt-3
+                        a.text-gray-500.text-xs.font-extrabold(href="/auth/login") #{__('Ja tens un compte? Inicia Sessió')} 
+                        a.text-gray-500.text-xs.font-extrabold(href='/auth/recuperar') #{__('Has oblidat el Password?')} 

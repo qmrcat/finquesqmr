@@ -1,0 +1,119 @@
+{
+    "items": [
+        {
+            "id": "9250a4c1",
+            "original": "Inici de sessió",
+            "trans": "Login"
+        },
+        {
+            "id": "4f9f901",
+            "original": "Correu electrònic",
+            "trans": "Email"
+        },
+        {
+            "id": "86ab4ab8",
+            "original": "Paraula de pas",
+            "trans": "Password"
+        },
+        {
+            "id": "9ee88e15",
+            "original": "Inicia sessió",
+            "trans": "Sign in"
+        },
+        {
+            "id": "43c4fb42",
+            "original": "No tens compte? Crea'n un",
+            "trans": "Don't have an account? Create one"
+        },
+        {
+            "id": "2e627ac5",
+            "original": "Has oblidat el Password?",
+            "trans": "Forgot your Password?"
+        },
+        {
+            "id": "4058f453",
+            "original": "Recuperar clau de pas",
+            "trans": "Recover password"
+        },
+        {
+            "id": "59c4824a",
+            "original": "Registrar-se",
+            "trans": "Sign up"
+        },
+        {
+            "id": "f656f908",
+            "original": "Crea el teu compte",
+            "trans": "Create your account"
+        },
+        {
+            "id": "54231355",
+            "original": "Nom",
+            "trans": "Name"
+        },
+        {
+            "id": "8b3ab676",
+            "original": "correu@electrònic.com",
+            "trans": "email@example.com"
+        },
+        {
+            "id": "35c246d5",
+            "original": "password",
+            "trans": "password"
+        },
+        {
+            "id": "30541f89",
+            "original": "Repetiu la paraula de pas",
+            "trans": "Repeat the password"
+        },
+        {
+            "id": "100fa0c3",
+            "original": "repetir password",
+            "trans": "repeat password"
+        },
+        {
+            "id": "b94c4e3c",
+            "original": "Crear compte",
+            "trans": "Create account"
+        },
+        {
+            "id": "e270419a",
+            "original": "Ja tens un compte? Inicia Sessió",
+            "trans": "Already have an account? Sign in"
+        },
+        {
+            "id": "3dae0d65",
+            "original": "Correu electrònic de recuperació",
+            "trans": "Recovery email"
+        },
+        {
+            "id": "2c827f00",
+            "original": "Escriu aquest codi:",
+            "trans": "Enter this code:"
+        },
+        {
+            "id": "48369107",
+            "original": "CODI",
+            "trans": "CODE"
+        },
+        {
+            "id": "444ef90e",
+            "original": "Recuperar clau",
+            "trans": "Recover key"
+        },
+        {
+            "id": "207206b7",
+            "original": "La teva IP:",
+            "trans": "Your IP:"
+        },
+        {
+            "id": "7ea37cb3",
+            "original": "codi",
+            "trans": "code"
+        },
+        {
+            "id": "a244d463",
+            "original": "El teu Nom",
+            "trans": "Your Name"
+        }
+    ]
+}
