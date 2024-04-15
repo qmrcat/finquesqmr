@@ -12,3 +12,20 @@ block blockcontent
                     label.block.text-sm.text-gray-500.mb-2.font-bold.cursor-pointer= usuari.email
 
         //- pre= JSON.stringify(propietats, undefined, 2)
+
+        h2.text-center.text-2xl.font-extrabold #{__('Xat')}
+
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                div(class="mb-2 py-2 border border-gray-500 rounded-md")
+                    ul(id="messages")
+                div
+                    form(id="message-form")
+                        input(type="hidden" name="_csrf" value= csrfToken)
+                        input#message-input.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700( autocomplete="off"
+                                placeholder=`${__("Escriu un missatge")}` type="text" name="message-input")
+                        button Enviar
+
+block scripts
+    script(src="https://cdn.socket.io/4.0.0/socket.io.min.js")
+    script(src="/js/xatclient.js")

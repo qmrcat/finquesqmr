@@ -819,6 +819,11 @@
             "id": "bdc5f5ca",
             "original": "S'ha modificat l'estat correctament",
             "trans": "S'ha modificat l'estat correctament"
+        },
+        {
+            "id": "4ed854d3",
+            "original": "Escriu un missatge",
+            "trans": "Escriu un missatge"
         }
     ]
 }

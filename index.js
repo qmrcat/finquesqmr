@@ -1,4 +1,6 @@
 import express from "express"
+import { createServer } from "http";
+import { Server } from "socket.io";
 import url from "node:url"
 import cors from "cors"
 import csrf from 'csurf'
@@ -15,6 +17,8 @@ import db from './config/db.js'
 
 import { translateOpenMain, qmrTrans, isProduccionTranslate, writeFileMainJSON, mainTranslate } from './translate/translate.js'
 
+
+
 dotenv.config({path: '.env'})
 process.env.producction = (process.env.IS_PRODUCTION.toUpperCase() === 'YES') // ? true : false
 
@@ -26,6 +30,16 @@ if (!process.env.producction){
     console.log( 'Desenvolupament' );
 }
 const app = express()
+
+const httpServer = createServer(app);
+
+const io = new Server(httpServer, {
+    cors: {
+        origin: "*", // Configura això segons les teves necessitats de cors
+        //origin: "http://127.0.0.1",
+        methods: ["GET", "POST"]
+    }
+});
 
 app.use(cors())
 
@@ -71,14 +85,34 @@ app.use( '/', propietatsRouter )
 app.use( '/', appRouter)
 app.use( '*', appRouter )
 
+
+
+io.on('connection', (socket) => {
+    console.log('Un usuari s\'ha connectat', socket.id );
+
+    socket.on('send_message', (data) => {
+        console.log( `Missatge rebut:` );
+        console.log( data );
+
+        io.emit('send_message', data);
+    });
+
+    socket.on('disconnect', () => {
+        console.log('Usuari desconnectat');
+    });
+});
+
 const PORT = process.env.PORT ?? process.env.BACKEND_PORT
 
-
-app.listen(PORT, () => {
-    console.log( `El servidor esta escoltan pel port: ${ PORT } ` );
-    console.log( `http://localhost:${ PORT } ` );
+// app.listen(PORT, () => {
+//     console.log( `El servidor esta escoltan pel port: ${ PORT } ` );
+//     console.log( `http://localhost:${ PORT } ` );
     
-})
+// })
+httpServer.listen(PORT, () => {
+    console.log(`El servidor està escoltant al port: ${PORT}`);
+    console.log(`http://localhost:${PORT}`);
+});
 
 //// RECORDAR
 // executar XAMPP (MySql)

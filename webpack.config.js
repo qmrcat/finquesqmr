@@ -8,7 +8,8 @@ export default {
         mostrarMapa: './src/js/mostrarMapa.js',
         mapaInicio: './src/js/mapaInicio.js',
         cambiarEstado: './src/js/cambiarEstado.js',
-        translateFetch: './translate/translateFetch.js'
+        translateFetch: './translate/translateFetch.js',
+        xatclient: './src/js/xatclient.js'
     },
     output: {
         filename: '[name].js',
