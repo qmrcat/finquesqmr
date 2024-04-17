@@ -5,11 +5,16 @@ import url from "node:url"
 import cors from "cors"
 import csrf from 'csurf'
 import cookieParser from "cookie-parser"
+import { parse } from 'cookie';
 import dotenv from 'dotenv'
 import userRouter from "./routes/usuarisRoutes.js"
 import propietatsRouter from "./routes/propietatsRoutes.js"
 import appRouter from "./routes/appRouter.js"
 import apiRoutes from "./routes/apiRoutes.js"
+import { returnUsuariAutentificatPerToken } from "./helpers/usuariAutentificat.js"
+
+import { userXatOk } from "./middleware/protegirRutes.js"
+////////import { userXatAuth } from "./middleware/protegirRutes.js"
 
 import { globalApp, getAllCategoriesGlobal, getAllPreusGlobal } from "./global/global.js"
 
@@ -17,18 +22,13 @@ import db from './config/db.js'
 
 import { translateOpenMain, qmrTrans, isProduccionTranslate, writeFileMainJSON, mainTranslate } from './translate/translate.js'
 
-
+const alreadyWelcomed = new Map();
 
 dotenv.config({path: '.env'})
 process.env.producction = (process.env.IS_PRODUCTION.toUpperCase() === 'YES') // ? true : false
 
-console.log("🚀 ~ process.env.producction:", process.env.producction)
+console.log("Estatus de codificaió en producció?:", (!process.env.producction) ? 'Producció' : 'Desenvolupament' )
 
-if (!process.env.producction){ 
-    console.log( 'Producció' );
-} else {
-    console.log( 'Desenvolupament' );
-}
 const app = express()
 
 const httpServer = createServer(app);
@@ -36,7 +36,6 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
     cors: {
         origin: "*", // Configura això segons les teves necessitats de cors
-        //origin: "http://127.0.0.1",
         methods: ["GET", "POST"]
     }
 });
@@ -63,6 +62,7 @@ try {
     db.sync()
     console.log( 'Conectat a la BD amb exit' )
 } catch (error) {
+    console.log( 'No s\'ha poguc conectar a la BD' )
     console.log( error )
 }
 
@@ -76,7 +76,6 @@ app.use((req, res, next) => {
     console.log('URL demanada:', urlCompleta);
     next();
 });
-  
 
 app.use( '/auth', userRouter )
 app.use( '/home', appRouter )
@@ -85,34 +84,106 @@ app.use( '/', propietatsRouter )
 app.use( '/', appRouter)
 app.use( '*', appRouter )
 
+// io.use((socket, next) => {
+//     const token = socket.handshake.auth.token;
+//     if (token) {
+//         jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+//             if (err) {
+//                 return next(new Error('Autenticació fallida'));
+//             }
+//             socket.decoded = decoded;
+//             next();
+//         });
+//     } else {
+//         //next(new Error('No token provided'));
+//         next(new Error('No s\ha proporcionat cap testimoni (token)'));
+//     }
+// });
 
+const retornaNomUsuariPelId = ( id ) => {
+    //  'XQ9BsrqYVTLE10y-AAAH' => { nom: 'Quimet', hconnexio: '345' },
+    
+    return alreadyWelcomed.get( id )?.nom ?? " ";
+}
 
-io.on('connection', (socket) => {
+//userXatAuth()
+io.on('connection', async ( socket ) => {
     console.log('Un usuari s\'ha connectat', socket.id );
+    ///console.log("🚀 ~ io.on ~ socket:", socket)
+    console.log("---")
+    if (socket.handshake.headers.cookie) {
+        console.log("🚀 ~ io.on ~ Galetes rebudes:", socket.handshake.headers.cookie)
+        const cookiesReq = parse(socket.handshake.headers.cookie);
+        const { _tokenSss } = cookiesReq;
+        console.log("🚀 ~ io.on ~ _tokenSss:", _tokenSss)
+
+        if ( !userXatOk( _tokenSss ) ) {
+            console.log( 'Error: Usuari no autentificat, es redirigeix a l\'inici de sessió.' );
+            socket.emit('connexio_rebutjada', 'Error: Usuari no autentificat');
+            socket.disconnect(true);
+        } else {
+            console.log( 'Usuari autentificat' );
+        }
+
+        if (!alreadyWelcomed.has(socket.id)){
+
+            const usuari = await returnUsuariAutentificatPerToken( _tokenSss )
+            console.log("🚀 ~ io.on ~ userGetValues usuari:", usuari)
+
+            if ( usuari === null ) {
+                console.log( 'Error: Usuari no trobat' );
+                socket.emit('connexio_rebutjada', 'Error: Usuari no trobat');
+                socket.disconnect(true);
+            } else {
+                socket.emit('missatge_benvinguda', `Benvingut ${usuari.nom}, al nostre servei de Xat!`);
+                alreadyWelcomed.set(socket.id, {'nom': usuari.nom, 'hconnexio': '345'});
+                console.log("🚀 ~ io.on ~ alreadyWelcomed:", alreadyWelcomed)
+                
+            }
+        }
+
+    } else {
+        console.log( 'Error: No existeix les galetes, es redirigeix a l\'inici de sessió.' );
+        socket.emit('connexio_rebutjada', 'Error: No existeix les galetes');
+        socket.disconnect(true);
+    }
 
     socket.on('send_message', (data) => {
-        console.log( `Missatge rebut:` );
+        console.log( `Missatge rebut: ${socket.id}` );
         console.log( data );
-
-        io.emit('send_message', data);
+        console.log("🚀 ~ io.on ~ Galetes rebudes (send_message) >>:", socket.handshake.headers.cookie)
+        const u = retornaNomUsuariPelId(socket.id)
+        //io.emit('send_message', data.m); // envia a tots el missatge rebut inclos el remiten
+        socket.broadcast.emit('send_message', { 'm': data.m, 'u': u } ); // envia a tots el missatge rebut esclos el remiten
     });
 
-    socket.on('disconnect', () => {
+    socket.on('disconnect', (reason) => {
         console.log('Usuari desconnectat');
+        console.log(`Client ${socket.id} desconnectat per la raó: ${reason}`);
+        alreadyWelcomed.delete(socket.id);
     });
+
 });
+    
 
 const PORT = process.env.PORT ?? process.env.BACKEND_PORT
+
+httpServer.listen(PORT, () => {
+    console.log(`El servidor està escoltant al port: ${PORT}`);
+    console.log(`http://localhost:${PORT}`);
+});
+
+
+
+// codi obsolet
+//
 
 // app.listen(PORT, () => {
 //     console.log( `El servidor esta escoltan pel port: ${ PORT } ` );
 //     console.log( `http://localhost:${ PORT } ` );
     
 // })
-httpServer.listen(PORT, () => {
-    console.log(`El servidor està escoltant al port: ${PORT}`);
-    console.log(`http://localhost:${PORT}`);
-});
+
 
 //// RECORDAR
 // executar XAMPP (MySql)

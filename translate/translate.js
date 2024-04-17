@@ -43,11 +43,9 @@ const getLocalesTranslate = () => {
 }
 
 
-
 // retorna si estem en Producció o no, 
 // si no existeis la variable d'entorn 'producction' per defecte es true
 const isProduccionTranslate = () => {
-    ///console.log("🚀 ~ isProduccionTranslate ~ process.env.producction:", process.env.producction)
     return process.env.producction
 }
 

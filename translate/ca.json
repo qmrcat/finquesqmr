@@ -824,6 +824,11 @@
             "id": "4ed854d3",
             "original": "Escriu un missatge",
             "trans": "Escriu un missatge"
+        },
+        {
+            "id": "b66049d9",
+            "original": "Xat",
+            "trans": "Xat"
         }
     ]
 }

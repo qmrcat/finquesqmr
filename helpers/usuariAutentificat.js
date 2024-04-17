@@ -37,7 +37,27 @@ const returnUsuariAutentificat = async ( req ) => {
       
 }
 
+const returnUsuariAutentificatPerToken = async ( token ) => {
+    
+    console.log("🚀 ~ returnUsuariAutentificatPerToken ~ returnUsuariAutentificatPerToken:")
+    
+    let usuari = null
+    //const { _tokenSss } = req.cookies
+
+    try {
+        if( token ) {
+            const decoded = jwt.verify(token, process.env.JWT_SECRET)
+            usuari = await Usuari.scope('eliminarPassword').findOne({ raw: true, where: { uuid: decoded.uuid } });
+        }       
+    } catch (error) {
+    } 
+
+    return usuari;
+      
+}
+
 export { 
     usuariAutentificat,
-    returnUsuariAutentificat
+    returnUsuariAutentificat,
+    returnUsuariAutentificatPerToken
 }

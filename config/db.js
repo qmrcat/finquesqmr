@@ -6,7 +6,7 @@ dotenv.config({path: '.env'})
 
 let db;
 
-console.log( 'process.env.BD_TYPE_DATABASE ', process.env.BD_TYPE_DATABASE );
+////console.log( 'process.env.BD_TYPE_DATABASE ', process.env.BD_TYPE_DATABASE );
 
 if (process.env.BD_TYPE_DATABASE === 'sqlite'){
     
@@ -24,7 +24,8 @@ if (process.env.BD_TYPE_DATABASE === 'sqlite'){
                 acquire: 30000,
                 idle: 10000
             },
-            operatorAliases: false
+            operatorAliases: false,
+            logging: false,
         })
 
     } catch (error) {
@@ -45,7 +46,8 @@ if (process.env.BD_TYPE_DATABASE === 'sqlite'){
             acquire: 30000,
             idle: 10000
         },
-        operatorAliases: false
+        operatorAliases: false,
+        logging: false
     })
 }
 

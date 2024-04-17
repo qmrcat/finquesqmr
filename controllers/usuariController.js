@@ -16,7 +16,6 @@ const usuariDuplicat = async ( email ) => {
 
 const formulariLogin = ( req, res ) => {
 
-
     res.render( 'auth/login', {
         __: qmrTrans,
         pagina: qmrTrans('Inici de sessió'),

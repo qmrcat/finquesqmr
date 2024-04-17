@@ -17,11 +17,11 @@ block blockcontent
 
         .mt-8.mx-auto.max-w-md
             .bg-white.py-8.px-4.shadow
-                div(class="mb-2 py-2 border border-gray-500 rounded-md")
-                    ul(id="messages")
+                div(class="mb-2 py-2 border border-gray-500 rounded-md overflow-y-auto max-h-[300px]" id="tauler")
+                    ul(id="messages" class="ml-1 mr-1")
                 div
                     form(id="message-form")
-                        input(type="hidden" name="_csrf" value= csrfToken)
+                        input(type="hidden" id="_csrf" name="_csrf" value= csrfToken)
                         input#message-input.w-full.px-3.py-2.border.border-gray-500.rounded-md.placeholder-gray-700( autocomplete="off"
                                 placeholder=`${__("Escriu un missatge")}` type="text" name="message-input")
                         button Enviar
